@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://SecondFractal/second_fractal.tres" type="Material" id=1]
+[ext_resource path="res://FirstFractal/Fractal.gd" type="Script" id=2]
+[ext_resource path="res://FirstFractal/Camera.gd" type="Script" id=3]
+[ext_resource path="res://ui/uiLayer.tscn" type="PackedScene" id=4]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="BoxShape" id=2]
+
+[node name="FirstFractal" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.434971, -0.20897, 0.875861, 0.0929481, 0.977922, 0.187161, -0.895634, 1.12485e-07, 0.444791, 0.755561, 0.584576, 1.01134 )
+cull_mask = 1047551
+script = ExtResource( 3 )
+
+[node name="Fractal" type="CSGMesh" parent="Camera"]
+transform = Transform( 1, 5.99211e-09, 0, 4.22437e-08, 1, 2.32209e-08, 5.96046e-08, -7.07869e-09, 1, 0, 0, -1.731 )
+mesh = SubResource( 1 )
+material = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="CanvasLayer" parent="Camera" instance=ExtResource( 4 )]
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 4.75791, 0, 0, 0, 0.160046, 0, 0, 0, 3.02405, 0, -0.736816, 0 )
+shape = SubResource( 2 )

@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Material/Carretera1.png" type="Texture" id=1]
+[ext_resource path="res://water/water.tres" type="Material" id=2]
+[ext_resource path="res://water/water.gd" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Carretera1" type="Sprite" parent="."]
+material = ExtResource( 2 )
+position = Vector2( 533.284, 315.581 )
+scale = Vector2( 3.68321, 3.94022 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+[connection signal="item_rect_changed" from="Carretera1" to="Carretera1" method="_on_Carretera1_item_rect_changed"]

@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://SeventhFractal/SeventhFractal.tres" type="Material" id=1]
+[ext_resource path="res://torus with shadows/TorusShadowed.gd" type="Script" id=2]
+[ext_resource path="res://SeventhFractal/MoveCamera.gd" type="Script" id=3]
+
+[sub_resource type="PhysicsMaterial" id=3]
+friction = 100.0
+
+[sub_resource type="SphereShape" id=2]
+
+[sub_resource type="CubeMesh" id=1]
+
+[node name="SixthFractal" type="Spatial"]
+
+[node name="Ship" type="RigidBody" parent="."]
+transform = Transform( -0.0471414, 0, 0.998888, 0, 1, 0, -0.998888, 0, -0.0471414, 1.25764, 0, 0 )
+physics_material_override = SubResource( 3 )
+gravity_scale = 0.0
+script = ExtResource( 3 )
+
+[node name="Ship" type="CollisionShape" parent="Ship"]
+shape = SubResource( 2 )
+
+[node name="Camera" type="Camera" parent="Ship/Ship"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0228234, -0.0546169, 0.0404816 )
+
+[node name="SixthFractal" type="CSGMesh" parent="Ship/Ship/Camera"]
+transform = Transform( 3.46033, -0.000176162, -0.0001899, 0.00026837, 2.27005, -0.000971079, 0.000154138, 0.000516236, 4.26923, -0.226374, -0.0811536, -5.50581 )
+mesh = SubResource( 1 )
+material = ExtResource( 1 )
+script = ExtResource( 2 )

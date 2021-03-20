@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://SixtFractal/SixthFractal.tres" type="Material" id=1]
+[ext_resource path="res://torus with shadows/TorusShadowed.gd" type="Script" id=2]
+
+[sub_resource type="CubeMesh" id=1]
+
+[node name="SixthFractal" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -0.909879, 0.157492, -0.383819, -0.249981, -0.946465, 0.20424, -0.331105, 0.281781, 0.900538, -10.5275, -1.25005, -11.7896 )
+
+[node name="SixthFractal" type="CSGMesh" parent="Camera"]
+transform = Transform( 3.46033, -0.000176162, -0.0001899, 0.00026837, 2.27005, -0.000971079, 0.000154138, 0.000516236, 4.26923, 3.8147e-06, 0.0630019, -5.59 )
+mesh = SubResource( 1 )
+material = ExtResource( 1 )
+script = ExtResource( 2 )

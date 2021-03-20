@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://torus with shadows 2.0/torusShadowed2.tres" type="Material" id=1]
+[ext_resource path="res://torus with shadows/TorusShadowed.gd" type="Script" id=2]
+
+[sub_resource type="CubeMesh" id=1]
+
+[node name="Torus shadow 2" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.4829, 0.40571, -0.77602, 0, 0.886195, 0.463312, 0.875675, -0.223733, 0.427944, -8.878, 3.87236, 1.54439 )
+
+[node name="TorusShadowed 2" type="CSGMesh" parent="Camera"]
+transform = Transform( 1.91579, -9.31321e-10, 0, 5.58794e-09, 1.57592, 7.45058e-09, 5.96046e-08, -1.49012e-08, 1.82382, -0.0202849, 0.0634811, -2.41792 )
+mesh = SubResource( 1 )
+material = ExtResource( 1 )
+script = ExtResource( 2 )

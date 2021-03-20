@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://Eighth Fractal/EigthFractal.shader" type="Shader" id=1]
+[ext_resource path="res://gradients/gradientmap.png" type="Texture" id=2]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/skyColor = Vector3( 0.9, 0.9, 0.9 )
+shader_param/solidColor = Vector3( 0.72, 0.86, 0.89 )
+shader_param/colorInvert = 0.0
+shader_param/glowRadius = 84.881
+shader_param/color1 = Vector3( 1, 0.91, 0 )
+shader_param/color2 = Vector3( 0.5, 0, 0.5 )
+shader_param/Iterations = 8
+shader_param/Scale = 3.081
+shader_param/minRadius2 = 0.133
+shader_param/fixedRadius2 = 0.321
+shader_param/foldingLimit = 0.451
+shader_param/gradient = ExtResource( 2 )

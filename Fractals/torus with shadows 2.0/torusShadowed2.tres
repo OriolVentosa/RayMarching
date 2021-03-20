@@ -1,0 +1,18 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://torus with shadows 2.0/torusShadowed2.shader" type="Shader" id=1]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/MAX_STEPS = 100
+shader_param/MAX_DIST = 100.0
+shader_param/SURF_DIST = 0.001
+shader_param/directionalLight = Vector3( 2.526, 1.649, 1.354 )
+shader_param/LightColor = Vector3( 1, 1, 1 )
+shader_param/MainColor = Vector3( 1, 1, 0 )
+shader_param/LightIntensity = 0.154
+shader_param/ShadowDist = Vector2( 0.075, 5.549 )
+shader_param/ShadowIntensity = 1.728
+shader_param/aOStepsize = 0.5
+shader_param/aOIterations = 100
+shader_param/aOIntensity = 0.026

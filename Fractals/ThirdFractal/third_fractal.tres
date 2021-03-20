@@ -1,0 +1,22 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://ThirdFractal/third_fractal.shader" type="Shader" id=1]
+
+
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/MAX_STEPS = 500
+shader_param/MAX_DIST = 100.0
+shader_param/SURF_DIST = 0.001
+shader_param/Iterations = 7
+shader_param/Bailout = 12.903
+shader_param/Power = 8.0
+shader_param/backGround = Vector3( 0.38, 0.104, 0.22 )
+shader_param/lightPos = Vector3( 5, 5, 5 )
+shader_param/lightColor = Vector3( 1, 1, 1 )
+shader_param/lightPower = 700.0
+shader_param/ambientColor = Vector3( 0.1, 0.1, 0.1 )
+shader_param/diffuseColor = Vector3( 0.02, 0.576, 0.204 )
+shader_param/specColor = Vector3( 0.02, 0.576, 0.204 )
+shader_param/shininess = 7.0

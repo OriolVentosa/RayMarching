@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://FirstFractal/first_fractal.shader" type="Shader" id=1]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/MAX_STEPS = 1000
+shader_param/MAX_DIST = 100.0
+shader_param/SURF_DIST = 0.001
+shader_param/Iterations = 100
+shader_param/Bailout = 12.903
+shader_param/Power = 8.0
+shader_param/color1 = Vector3( 0.044, 0.128, 0.156 )
+shader_param/color2 = Vector3( 0.396, 0.616, 0.412 )
+shader_param/color3 = Vector3( 0.868, 0.764, 0.476 )
+shader_param/backGround = Vector3( 0.38, 0.104, 0.22 )

@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://FourthFractal/FourthFractal.shader" type="Shader" id=1]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/MAX_STEPS = 300
+shader_param/MAX_DIST = 100.0
+shader_param/SURF_DIST = 0.001
+shader_param/directionalLight = Vector3( 2.526, 1.649, 1.354 )
+shader_param/LightColor = Vector3( 1, 1, 1 )
+shader_param/MainColor = Vector3( 1, 1, 0 )
+shader_param/LightIntensity = 0.272
+shader_param/ShadowDist = Vector2( 0.016, 5.642 )
+shader_param/ShadowIntensity = 0.0
+shader_param/aOStepsize = 0.48
+shader_param/aOIterations = 40
+shader_param/aOIntensity = 0.02
+shader_param/Iterations = 8
+shader_param/Bailout = 1.326
+shader_param/Power = 8.0

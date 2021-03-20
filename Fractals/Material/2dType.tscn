@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Material/Carretera1.png" type="Texture" id=1]
+[ext_resource path="res://Material/material2d.tres" type="Material" id=2]
+[ext_resource path="res://Material/Interface.gd" type="Script" id=3]
+[ext_resource path="res://Material/HSlider.gd" type="Script" id=4]
+[ext_resource path="res://Material/modidySprite.gd" type="Script" id=5]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 146.871, 96.9404 )
+
+[node name="Carretera1" type="Sprite" parent="."]
+material = ExtResource( 2 )
+texture = ExtResource( 1 )
+script = ExtResource( 5 )
+
+[node name="Interface" type="VBoxContainer" parent="."]
+margin_left = -23.3007
+margin_top = 35.5059
+margin_right = 43.6993
+margin_bottom = 75.5059
+rect_scale = Vector2( 0.797923, 0.76 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Interface"]
+margin_right = 99.0
+margin_bottom = 14.0
+text = "Amplitude: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSlider" type="HSlider" parent="Interface"]
+margin_top = 18.0
+margin_right = 99.0
+margin_bottom = 34.0
+value = 30.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="amplitude_changed" from="Interface" to="Carretera1" method="_on_Interface_amplitude_changed"]
+[connection signal="value_changed" from="Interface/HSlider" to="Interface" method="_on_HSlider_value_changed"]

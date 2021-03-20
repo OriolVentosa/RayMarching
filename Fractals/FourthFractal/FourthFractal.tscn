@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://FourthFractal/FourthFractal.tres" type="Material" id=1]
+[ext_resource path="res://torus with shadows/TorusShadowed.gd" type="Script" id=2]
+[ext_resource path="res://SecondFractal/Camera.gd" type="Script" id=3]
+[ext_resource path="res://ui/uiLayer.tscn" type="PackedScene" id=4]
+
+[sub_resource type="CubeMesh" id=1]
+
+[node name="FouthFractal" type="Spatial"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0541446, 0.264103, 2.10565 )
+script = ExtResource( 3 )
+
+[node name="FourthFractal" type="CSGMesh" parent="Camera"]
+transform = Transform( 5.16225, -2.50952e-09, 0, 1.45944e-08, 4.11593, 1.94592e-08, 1.39523e-07, -3.4881e-08, 4.26923, 0, 0.063, -5.59 )
+mesh = SubResource( 1 )
+material = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="CanvasLayer" parent="Camera" instance=ExtResource( 4 )]

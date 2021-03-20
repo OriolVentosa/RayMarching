@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://torus/torus.tres" type="Material" id=1]
+[ext_resource path="res://torus/Camera.gd" type="Script" id=2]
+[ext_resource path="res://torus/handleMaterial.gd" type="Script" id=3]
+
+[sub_resource type="CubeMesh" id=1]
+
+[node name="Tor" type="Spatial"]
+
+[node name="f" type="CSGMesh" parent="."]
+transform = Transform( 13.0104, 0, 0, 0, 17.3801, 0, 0, 0, 31.8415, 4.39649, 13.6841, -21.784 )
+mesh = SubResource( 1 )
+material = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.38201, 20.1186, 24.9816 )
+current = true
+fov = 80.7759
+near = 0.09
+script = ExtResource( 2 )
